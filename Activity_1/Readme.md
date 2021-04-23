@@ -1,10 +1,12 @@
 # Read me
-## when both the  switch and pb button is open
-![pic][Screenshot (32).png]
+## When both the  switch and push button is open
+![pic](i2.png)
 
-## when one of the push button  or the switch is off 
-![pic](Screenshot (33).png)
+## When one of the push button  or the switch is off 
+![pic](i1.png)
+![pic](i4.png)
 
-## when both the push button and switch is closed or activated
 
-![pic](Screenshot (34).png)
+## When both the push button and switch is closed or activated
+
+![pic](i3.png)
