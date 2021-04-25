@@ -17,3 +17,4 @@ jobs:
       run: sudo apt-get install cppcheck
     - name: Code Quality
       run: make -C Activity_1/ analysis
+      run: make -C Activity_2/ analysis
