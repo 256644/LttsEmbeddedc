@@ -52,7 +52,7 @@ temp=ReadADC(0);
           OCR0A=179;
         _delay_ms(2000);  
       }
-      else{
+      else if (temp>=710 && temp<=1024){
             OCR0A=243;
         _delay_ms(2000);  
       }
