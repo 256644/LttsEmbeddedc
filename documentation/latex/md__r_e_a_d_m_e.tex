@@ -1,0 +1,78 @@
+\href{https://github.com/256644/LttsEmbeddedc/actions/workflows/code.yml}{\texttt{ }} \href{https://github.com/256644/LttsEmbeddedc/actions/workflows/compile.yml}{\texttt{ }}\hypertarget{md__r_e_a_d_m_e_autotoc_md0}{}\doxysection{SEAT HEATING MECHANISM}\label{md__r_e_a_d_m_e_autotoc_md0}
+
+\begin{DoxyEnumerate}
+\item THE USER ENTERS INTO CAR AND OCCUPIES THE SEAT.
+\item AND THEN HE TURNS ON THE HEAT SENSOR.
+\item IF BOTH THE ABOVE CONDITION ARE MEET THE LED WILL TURN ON.
+\item THEN THE USER ADJUST THE TEMPERTURE.
+\item THE TEMPERATURE VALUE IS DISPLAYED ON THE SCREEN.
+\item THEN THE SEAT WILL BE COOLED ACCORDINGLY.
+\end{DoxyEnumerate}\hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysection{SIMULATION RESULTS\+:}\label{md__r_e_a_d_m_e_autotoc_md1}
+   
+
+\DoxyHorRuler{0}
+ \hypertarget{md__r_e_a_d_m_e_autotoc_md3}{}\doxysection{ACTIVITY 1}\label{md__r_e_a_d_m_e_autotoc_md3}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md4}{}\doxysubsubsection{If the user seated onto the seat and then he had turned on the heatbutton , only then the led should turn on.}\label{md__r_e_a_d_m_e_autotoc_md4}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ LOGIC STATE   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ LED STATUS    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ LOGIC STATE   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ LED STATUS    }\\\cline{1-2}
+\endhead
+0 0   &OFF    \\\cline{1-2}
+0 1   &OFF    \\\cline{1-2}
+1 0   &OFF    \\\cline{1-2}
+1 1   &ON   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md5}{}\doxysubsection{Simulation results}\label{md__r_e_a_d_m_e_autotoc_md5}
+  
+
+\DoxyHorRuler{0}
+ \hypertarget{md__r_e_a_d_m_e_autotoc_md7}{}\doxysection{ACTIVITY 2}\label{md__r_e_a_d_m_e_autotoc_md7}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md8}{}\doxysubsubsection{To take input from temp sensor and to indicate changes at a particular temparture.}\label{md__r_e_a_d_m_e_autotoc_md8}
+Since temp sensor is not availaible in simul ide made use of potentiometer and calculated the voltages for particuar range.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Voltage(\+V)   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Analog Value   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Status    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Voltage(\+V)   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Analog Value   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Status    }\\\cline{1-3}
+\endhead
+0-\/1.\+0   &0-\/200   &B1 LED on    \\\cline{1-3}
+1.\+2-\/2.\+4   &210-\/500   &B2 LED on    \\\cline{1-3}
+2.\+5-\/3.\+6   &510-\/700   &B3 LED on    \\\cline{1-3}
+3.\+8-\/5.\+0   &710-\/1024   &B4 LED on   \\\cline{1-3}
+\end{longtabu}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md9}{}\doxysubsection{Simulation Results\+:}\label{md__r_e_a_d_m_e_autotoc_md9}
+  
+
+\DoxyHorRuler{0}
+ \hypertarget{md__r_e_a_d_m_e_autotoc_md11}{}\doxysection{ACTIVITY 3}\label{md__r_e_a_d_m_e_autotoc_md11}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md12}{}\doxysubsubsection{To generate pwm at different analog values.}\label{md__r_e_a_d_m_e_autotoc_md12}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ ADC Value(\+Temp Sensor)   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Output PWM    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ ADC Value(\+Temp Sensor)   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Output PWM    }\\\cline{1-2}
+\endhead
+0-\/200   &20\%    \\\cline{1-2}
+210-\/500   &40\%    \\\cline{1-2}
+510-\/700   &70\%    \\\cline{1-2}
+710-\/1024   &95\%   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md13}{}\doxysubsection{Simulation Results\+:}\label{md__r_e_a_d_m_e_autotoc_md13}
+   \hypertarget{md__r_e_a_d_m_e_autotoc_md14}{}\doxysection{ACTIVITY 4}\label{md__r_e_a_d_m_e_autotoc_md14}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md15}{}\doxysubsubsection{To send the temperature value to a Serail monitor.}\label{md__r_e_a_d_m_e_autotoc_md15}
+ 

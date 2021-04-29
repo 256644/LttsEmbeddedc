@@ -1,0 +1,84 @@
+\hypertarget{main_8c}{}\doxysection{main.\+c File Reference}
+\label{main_8c}\index{main.c@{main.c}}
+{\ttfamily \#include $<$avr/io.\+h$>$}\newline
+{\ttfamily \#include $<$util/delay.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}activity1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}activity2.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}activity3.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}activity4.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8c_ab4553be4db9860d940f81d7447173b2f}\label{main_8c_ab4553be4db9860d940f81d7447173b2f}} 
+\#define \mbox{\hyperlink{main_8c_ab4553be4db9860d940f81d7447173b2f}{LED\+\_\+\+PIN}}~PB0
+\begin{DoxyCompactList}\small\item\em macro definition \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{main_8c_a663daa01e565aee93c6f20c5845b90b4}\label{main_8c_a663daa01e565aee93c6f20c5845b90b4}} 
+\#define {\bfseries LED\+\_\+\+PORT}~PORTB
+\item 
+\mbox{\Hypertarget{main_8c_ae099bc678d5a021e630dc664f9e00107}\label{main_8c_ae099bc678d5a021e630dc664f9e00107}} 
+\#define {\bfseries PWM\+\_\+\+GEN\+\_\+\+PIN}~PD6
+\item 
+\mbox{\Hypertarget{main_8c_ac38a4c9df1f1c98f541e8e41f864f35e}\label{main_8c_ac38a4c9df1f1c98f541e8e41f864f35e}} 
+\#define {\bfseries SETD}~0b00000011
+\item 
+\mbox{\Hypertarget{main_8c_abfa9d280015e5722154722a570d38768}\label{main_8c_abfa9d280015e5722154722a570d38768}} 
+\#define {\bfseries PWM\+\_\+\+GEN}~OCR0A
+\item 
+\mbox{\Hypertarget{main_8c_a802b2b582b121e4632aa9a491d503720}\label{main_8c_a802b2b582b121e4632aa9a491d503720}} 
+\#define {\bfseries FOSC}~16000000
+\item 
+\mbox{\Hypertarget{main_8c_a62634036639f88eece6fbf226b45f84b}\label{main_8c_a62634036639f88eece6fbf226b45f84b}} 
+\#define {\bfseries BAUD}~9600
+\item 
+\mbox{\Hypertarget{main_8c_a711e9130c825a7269c8c87dbb57a85e0}\label{main_8c_a711e9130c825a7269c8c87dbb57a85e0}} 
+\#define {\bfseries MYUBRR}~FOSC/16/BAUD-\/1
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8c_a8f194b8bb531e753937f2e594e941a7b}\label{main_8c_a8f194b8bb531e753937f2e594e941a7b}} 
+void \mbox{\hyperlink{main_8c_a8f194b8bb531e753937f2e594e941a7b}{init\+\_\+peripherial}} ()
+\begin{DoxyCompactList}\small\item\em initialising values \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+ramya name (\href{mailto:you@domain.com}{\texttt{ you@domain.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2021-\/04-\/29
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2021 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+different temperature string initialisation
+
+initialising peripheral
+
+calling adc function which is initialised
+
+Set the pulse width modultion registers
+
+initialising uart communication
+
+if the driver is seated and the heater is also on
+
+reading the temperature value
+
+transmitting the temperature values
+
+if no driver is seated
