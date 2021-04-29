@@ -7,7 +7,7 @@
 1. THE USER ENTERS INTO CAR AND OCCUPIES THE SEAT.
 2. AND THEN HE TURNS ON THE HEAT SENSOR.
 3. IF BOTH THE ABOVE CONDITION ARE MEET THE LED WILL TURN ON.
-4. THEN THE USER ABJUST THE TEMPERTURE.
+4. THEN THE USER ADJUST THE TEMPERTURE.
 5. THE TEMPERATURE VALUE IS DISPLAYED ON THE SCREEN.
 6. THEN THE SEAT WILL BE COOLED ACCORDINGLY.
 
@@ -23,7 +23,7 @@
 ----
 # ACTIVITY 1
  
-### If the user seated ontoTthe seat and then he had turned on the heatbutton , only then the led should turn on.
+### If the user seated onto the seat and then he had turned on the heatbutton , only then the led should turn on.
 |LOGIC STATE |LED STATUS|
 |---|---|
 |0  0|  OFF|
