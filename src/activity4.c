@@ -4,6 +4,11 @@
 #define FOSC 16000000// Clock Speed
 #define BAUD 9600
 #define MYUBRR FOSC/16/BAUD-1
+/**
+ * @brief initialising the USART
+ * 
+ * @param ubrr 
+ */
 void USART_Init(unsigned int ubrr)
 {
 /*Set baud rate */

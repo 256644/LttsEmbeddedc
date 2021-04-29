@@ -1,4 +1,14 @@
-
+/**
+ * @file main.c
+ * @author ramya name (you@domain.com)
+ * @brief 
+ * @version 0.1
+ * @date 2021-04-29
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
+ 
 #include <avr/io.h>
 #include<util/delay.h>
 #include"activity1.h"
@@ -6,6 +16,10 @@
 #include"activity3.h"
 #include"activity4.h"
 
+/**
+ * @brief macro definition
+ * 
+ */
 #define LED_PIN PB0
 #define LED_PORT PORTB
 #define PWM_GEN_PIN PD6
@@ -14,6 +28,10 @@
 #define FOSC 16000000// Clock Speed
 #define BAUD 9600
 #define MYUBRR FOSC/16/BAUD-1
+/**
+ * @brief initialising values
+ * 
+ */
 void init_peripherial()
 {
   DDRD|=(1<<PWM_GEN_PIN);
@@ -24,30 +42,61 @@ DDRB|=(1<<LED_PIN);
 
 int main(void)
 {
-volatile uint8_t check=0;
+
 uint16_t temp;
-int i=0;
+int i;
+/**
+ * @brief different temperature string initialisation
+ * 
+ */
 unsigned char a[]="20";
 unsigned char b[]="25";
 unsigned char c[]="29";
 unsigned char d[]="32";
-
+/**
+ * @brief initialising peripheral
+ * 
+ */
 init_peripherial();
+/**
+ * @brief calling adc function which is initialised
+ * 
+ * 
+ */
 initADC();
+/**
+ * @brief Set the pulse width modultion registers
+ * 
+ */
 set_pwm();
+/**
+ * @brief initialising uart communication
+ * 
+ */
 USART_Init(MYUBRR);
 while(1)
 {
-
+/**
+ * @brief if the driver is seated and the heater is also on
+ * 
+ */
+volatile uint8_t check=0;
 check=check_seating();
 if(check==1)
 {
-
+/**
+     * @brief reading the temperature value
+     * 
+     */
     LED_PORT|=(1<<LED_PIN);
     temp=ReadADC(0);
       
       if((temp>=0 && temp<=200))
       {
+        /**
+         * @brief transmitting the temperature values
+         * 
+         */
         for(i=0;a[i]!='\0';i++)
         {
           USART_Transmit(a[i]);
@@ -85,6 +134,10 @@ if(check==1)
       }
 
 }
+/**
+ * @brief if no driver is seated
+ * 
+ */
 else
 {
 

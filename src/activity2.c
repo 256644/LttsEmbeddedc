@@ -1,12 +1,24 @@
 #include <avr/io.h>
 #include<util/delay.h>
 #include"activity2.h"
+
+/**
+ * @brief initialising the adc
+ * 
+ */
 void initADC()
+
 {
 
     ADMUX=(1<<REFS0);
     ADCSRA|=(1<<ADEN)|(7<<ADPS0);
 }
+/**
+ * @brief passing the channel 
+ * 
+ * @param ch any channel from  the c port
+ * @return uint16_t the value read by the ADC
+ */
 uint16_t ReadADC(uint8_t ch)
 {
 
