@@ -75,7 +75,7 @@ if(check==1)
           PWM_GEN=179;
         _delay_ms(2000);  
       }
-      else{
+      else if(temp>=710 && temp<=1024){
          for(i=0;d[i]!='\0';i++)
         {
           USART_Transmit(d[i]);
