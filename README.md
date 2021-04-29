@@ -24,7 +24,12 @@
 # ACTIVITY 1
  
 ### If the user seated ontoTthe seat and then he had turned on the heatbutton , only then the led should turn on.
-
+|LOGIC STATE |LED STATUS|
+|---|---|
+|0  0|  OFF|
+|0 1|OFF|
+|1 0 |OFF|
+|1 1 |ON|
 ## Simulation results
 ![image](img/11.jpeg)
 ![image](img/12.jpeg) 
