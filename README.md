@@ -1,4 +1,5 @@
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/4b1b0e4d4ed54f5a8dca05eaae93e74d)](https://app.codacy.com/gh/256644/LttsEmbeddedc?utm_source=github.com&utm_medium=referral&utm_content=256644/LttsEmbeddedc&utm_campaign=Badge_Grade_Settings)
 [![Cppcheck](https://github.com/256644/LttsEmbeddedc/actions/workflows/code.yml/badge.svg)](https://github.com/256644/LttsEmbeddedc/actions/workflows/code.yml)
 [![Compile-Linux](https://github.com/256644/LttsEmbeddedc/actions/workflows/compile.yml/badge.svg)](https://github.com/256644/LttsEmbeddedc/actions/workflows/compile.yml)
 
