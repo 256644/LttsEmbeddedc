@@ -24,6 +24,7 @@
 #define LED_PORT PORTB
 #define PWM_GEN_PIN PD6
 #define SETD 0b00000011
+// OCR1A (16-bit register contains the converted value
 #define  PWM_GEN OCR0A
 #define FOSC 16000000// Clock Speed
 #define BAUD 9600
@@ -34,16 +35,19 @@
  */
 void init_peripherial()
 {
+  // Direction of ports
   DDRD|=(1<<PWM_GEN_PIN);
-PORTD=SETD;
-DDRB|=(1<<LED_PIN);
+  DDRB|=(1<<LED_PIN);
+  // PULL-UP +5V for push-buttons
+  PORTD=SETD;
+  
 
 }
 
 int main(void)
 {
-
-uint16_t temp;
+// temp contains the temperature value that ADC renders
+unsigned volatile temp;
 int i;
 /**
  * @brief different temperature string initialisation
@@ -54,7 +58,7 @@ unsigned char b[]="25";
 unsigned char c[]="29";
 unsigned char d[]="32";
 /**
- * @brief initialising peripheral
+ * @brief call functionthat configures peripheral
  * 
  */
 init_peripherial();
@@ -80,7 +84,7 @@ while(1)
  * 
  */
 volatile uint8_t check=0;
-check=check_seating();
+check=check_seatoccup();
 if(check==1)
 {
     /**

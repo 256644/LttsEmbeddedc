@@ -32,11 +32,15 @@ void initADC()
 uint16_t ReadADC(uint8_t ch)
 {
 
+    //Selection of ADC channel ch=[0-7]
     ADMUX&=0xf8;
     ch=ch&0b00000111;
     ADMUX|=ch;
+    //Start Single Conversion
     ADCSRA|=(1<<ADSC);
-    while(!(ADCSRA&(1<<ADIF)));
+    //Wait for conversion to complete
+    while(!(ADCSRA & (1<<ADIF)));
+    //clearing ADIF
     ADCSRA|=(1<<ADIF);
     return(ADC);
 }

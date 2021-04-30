@@ -16,9 +16,6 @@
 # SIMULATION RESULTS:
 
 ![image](img/41.jpeg)
-![image](img/42.jpeg)
-![image](img/43.jpeg)
-![image](img/44.jpeg)
 
 ----
 # ACTIVITY 1
@@ -31,6 +28,8 @@
 |1 0 |OFF|
 |1 1 |ON|
 ## Simulation results
+
+
 ![image](img/11.jpeg)
 ![image](img/12.jpeg) 
 ![image](img/13.jpeg)
@@ -68,12 +67,11 @@ Since temp sensor is not availaible in simul ide made use of potentiometer and c
 
 ## Simulation Results:
 
-![image](img/31.jpeg)
-![image](img/32.jpeg) 
-![image](img/33.jpeg)
-![image](img/34.jpeg)
+|![image](img/33.jpeg)|![image](img/34.jpeg) |![image](img/32.jpeg)|![image](img/31.jpeg)|
+|---|---|---|---|
+|Output PWM-20%|Output PWM-40%|Output PWM-71%|Output PWM-95%|
 
 # ACTIVITY 4
 ### To send the temperature value to a Serail monitor.
 
-![IMAGE](img/4.jpg)
+![image](img/44.jpeg)

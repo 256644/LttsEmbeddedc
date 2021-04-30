@@ -29,6 +29,19 @@ UCSR0B = (1<<RXEN0)|(1<<TXEN0);
 /* Set frame format: 8data, 2stop bit */
 UCSR0C = (1<<USBS0)|(3<<UCSZ00);
 }
+/*
+char USARTReadChar()
+{
+    // Wait until data is available
+
+    while(!(UCSR0A & (1<<RXC0)))
+    {
+        //Do nothing
+    }
+
+    return UDR0;
+}
+*/
 void USART_Transmit(unsigned char data)
 {
 /* Wait for empty transmit buffer */
