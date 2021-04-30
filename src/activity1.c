@@ -11,15 +11,24 @@
 #include <avr/io.h>
 #include<util/delay.h>
 #include"activity1.h"
+#include "macrodef.h"
+
 /**
- * @brief defining status of switch_1 is defined by considering the status of input hardware pin
- * @brief defining status of switch_2 is defined by considering the status of input hardware pin
+ * @brief initalizes the peripherals
+ * 
  */
 
-#define switch_1 !(PIND & (1 << PD0))
-#define switch_2 !(PIND & (1 << PD1))
+void init_peripherial()
+{
+  // Direction of ports
+  DDRD|=(1<<PWM_GEN_PIN);
+  DDRB|=(1<<LED_PIN);
+  // PULL-UP +5V for push-buttons
+  PORTD=0b00000011;
+}
 /**
- * @brief check if the driver is seated and the heater is on
+ * @brief checks if whether the seat is occupied by the driver and 
+ * he had turned on the switches
  * 
  * @return uint8_t 
  */

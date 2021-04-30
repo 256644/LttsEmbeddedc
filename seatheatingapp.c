@@ -15,39 +15,13 @@
 #include"activity2.h"
 #include"activity3.h"
 #include"activity4.h"
+#include "macrodef.h"
 
-/**
- * @brief macro definition
- * 
- */
-#define LED_PIN PB0
-#define LED_PORT PORTB
-#define PWM_GEN_PIN PD6
-#define SETD 0b00000011
-// OCR0A (16-bit register contains the converted value)
-#define  PWM_GEN OCR0A
-#define FOSC 16000000// Clock Speed
-#define BAUD 9600
-#define MYUBRR FOSC/16/BAUD-1
-/**
- * @brief initialising values
- * 
- */
-void init_peripherial()
-{
-  // Direction of ports
-  DDRD|=(1<<PWM_GEN_PIN);
-  DDRB|=(1<<LED_PIN);
-  // PULL-UP +5V for push-buttons
-  PORTD=SETD;
-  
-
-}
 
 int main(void)
 {
 // temp contains the temperature value that ADC renders
-unsigned volatile temp;
+uint16_t volatile temp;
 /**
  * @brief call functionthat configures peripheral
  * 
@@ -74,9 +48,7 @@ while(1)
  * @brief if the driver is seated and the heater is also on
  * 
  */
-volatile uint8_t check=0;
-check=check_seatoccup();
-if(check)
+if(check_seatoccup())
 {
     /**
      * @brief reading the temperature value
@@ -84,33 +56,32 @@ if(check)
      */
     LED_PORT|=(1<<LED_PIN);
     temp=ReadADC(0);
-      
       if((temp>=0 && temp<=200))
       {
         /**
          * @brief transmitting the temperature values
          * 
          */
-        USARTWriteChar(20);
+        USARTWrite(20);
          PWM_GEN=52;
         _delay_ms(2000);
 
       }
       else if(temp>=210 && temp<=500)
       {
-          USARTWriteChar(25);
+          USARTWrite(25);
           PWM_GEN=105;
         _delay_ms(2000);
       }
       else if(temp>=510 && temp<=700)
       {  
-        USARTWriteChar(29); 
+        USARTWrite(29); 
           PWM_GEN=179;
         _delay_ms(2000);  
       }
       else if(temp>=710 && temp<=1024)
       {
-          USARTWriteChar(30);
+          USARTWrite(33);
             PWM_GEN=243;
         _delay_ms(2000);  
       }
@@ -123,8 +94,6 @@ if(check)
 
 else
 {
-
-
     LED_PORT&=~(1<<LED_PIN);
 }
 

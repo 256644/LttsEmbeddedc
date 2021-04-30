@@ -11,6 +11,7 @@
 #include <avr/io.h>
 #include<util/delay.h>
 #include"activity2.h"
+#include "macrodef.h"
 
 /**
  * @brief initialising the adc
