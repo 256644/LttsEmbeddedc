@@ -29,10 +29,12 @@
 |1 1 |ON|
 ## Simulation results
 
+|![image](img/11.jpeg)|![image](img/12.jpeg) |![image](img/13.jpeg)|
+|---|---|---|
+|Both switch are open(0 0)|Either of switch is open (0 1 or 1 0)|Both switch are closed(1 1)|
 
-![image](img/11.jpeg)
-![image](img/12.jpeg) 
-![image](img/13.jpeg)
+
+
 
 ----
 # ACTIVITY 2
@@ -50,8 +52,7 @@ Since temp sensor is not availaible in simul ide made use of potentiometer and c
 
 ## Simulation Results:
 ![image](img/21.jpeg)
-![image](img/22.jpeg) 
-![image](img/23.jpeg)
+
 
 ----
 # ACTIVITY 3
