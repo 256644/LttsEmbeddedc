@@ -60,8 +60,7 @@ unsigned char d[]="32";
 init_peripherial();
 /**
  * @brief calling adc function which is initialised
- * 
- * 
+ *  
  */
 initADC();
 /**
@@ -84,7 +83,7 @@ volatile uint8_t check=0;
 check=check_seating();
 if(check==1)
 {
-/**
+    /**
      * @brief reading the temperature value
      * 
      */
@@ -138,6 +137,7 @@ if(check==1)
  * @brief if no driver is seated
  * 
  */
+
 else
 {
 
