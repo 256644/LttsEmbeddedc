@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['init_5fperipherial_6',['init_peripherial',['../main_8c.html#a8f194b8bb531e753937f2e594e941a7b',1,'main.c']]]
+  ['check_5fseatoccup_15',['check_seatoccup',['../activity1_8c.html#ad4f764ffd79bdfbf5c8988dce0a247a8',1,'activity1.c']]]
 ];

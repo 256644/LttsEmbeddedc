@@ -1,7 +1,7 @@
 
 [![Cppcheck](https://github.com/256644/LttsEmbeddedc/actions/workflows/code.yml/badge.svg)](https://github.com/256644/LttsEmbeddedc/actions/workflows/code.yml)
 [![Compile-Linux](https://github.com/256644/LttsEmbeddedc/actions/workflows/compile.yml/badge.svg)](https://github.com/256644/LttsEmbeddedc/actions/workflows/compile.yml)
-
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/6d0c2956e64a4cfa9bb14f55a17301b0)](https://www.codacy.com/gh/256644/LttsEmbeddedc/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=256644/LttsEmbeddedc&amp;utm_campaign=Badge_Grade)
 # SEAT HEATING MECHANISM
 
 1. THE USER ENTERS INTO CAR AND OCCUPIES THE SEAT.

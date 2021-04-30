@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['main_7',['main',['../main_8c.html#a840291bc02cba5474a4cb46a9b9566fe',1,'main.c']]]
+  ['initadc_16',['initADC',['../activity2_8c.html#ab3166bd1ba3160d3bac85daddb12f947',1,'activity2.c']]]
 ];
