@@ -24,7 +24,7 @@
 #define LED_PORT PORTB
 #define PWM_GEN_PIN PD6
 #define SETD 0b00000011
-// OCR1A (16-bit register contains the converted value
+// OCR0A (16-bit register contains the converted value)
 #define  PWM_GEN OCR0A
 #define FOSC 16000000// Clock Speed
 #define BAUD 9600
@@ -48,15 +48,6 @@ int main(void)
 {
 // temp contains the temperature value that ADC renders
 unsigned volatile temp;
-int i;
-/**
- * @brief different temperature string initialisation
- * 
- */
-unsigned char a[]="20";
-unsigned char b[]="25";
-unsigned char c[]="29";
-unsigned char d[]="32";
 /**
  * @brief call functionthat configures peripheral
  * 
@@ -85,7 +76,7 @@ while(1)
  */
 volatile uint8_t check=0;
 check=check_seatoccup();
-if(check==1)
+if(check)
 {
     /**
      * @brief reading the temperature value
@@ -100,38 +91,26 @@ if(check==1)
          * @brief transmitting the temperature values
          * 
          */
-        for(i=0;a[i]!='\0';i++)
-        {
-          USART_Transmit(a[i]);
-        }
-         
+        USARTWriteChar(20);
          PWM_GEN=52;
         _delay_ms(2000);
 
       }
       else if(temp>=210 && temp<=500)
       {
-            for(i=0;b[i]!='\0';i++)
-        {
-          USART_Transmit(b[i]);
-        } 
+          USARTWriteChar(25);
           PWM_GEN=105;
         _delay_ms(2000);
       }
       else if(temp>=510 && temp<=700)
-      {
-        for(i=0;c[i]!='\0';i++)
-        {
-          USART_Transmit(c[i]);
-        } 
+      {  
+        USARTWriteChar(29); 
           PWM_GEN=179;
         _delay_ms(2000);  
       }
-      else if(temp>=710 && temp<=1024){
-         for(i=0;d[i]!='\0';i++)
-        {
-          USART_Transmit(d[i]);
-        } 
+      else if(temp>=710 && temp<=1024)
+      {
+          USARTWriteChar(30);
             PWM_GEN=243;
         _delay_ms(2000);  
       }
